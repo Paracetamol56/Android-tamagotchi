@@ -1,12 +1,12 @@
-package com.example.tamagotchi.mvc2;
+package com.example.tamagotchi.mvc3;
 
 import android.view.View;
 
 import com.example.tamagotchi.PnlManager;
 import com.example.tamagotchi.R;
 
-public class Pnl2_Ctrl implements View.OnClickListener {
-    public Pnl2_Mdl refMdl;
+public class Pnl3_Ctrl implements View.OnClickListener {
+    public Pnl3_Mdl refMdl;
 
     public PnlManager refPnlManager;
 
@@ -23,9 +23,6 @@ public class Pnl2_Ctrl implements View.OnClickListener {
         }
         else if (view.getId() == R.id.btnGotoPnl1) {
             refPnlManager.setPnl(1);
-        }
-        else if (view.getId() == R.id.btnGotoPnl3) {
-            refPnlManager.setPnl(3);
         }
     }
 }

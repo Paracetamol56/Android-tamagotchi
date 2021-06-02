@@ -8,6 +8,8 @@ import com.example.tamagotchi.mvc1.Pnl1_View;
 import com.example.tamagotchi.mvc2.Pnl2_Ctrl;
 import com.example.tamagotchi.mvc2.Pnl2_Mdl;
 import com.example.tamagotchi.mvc2.Pnl2_View;
+import com.example.tamagotchi.mvc3.Pnl3_Ctrl;
+import com.example.tamagotchi.mvc3.Pnl3_View;
 
 public class PnlManager {
 
@@ -17,8 +19,10 @@ public class PnlManager {
 
     private Pnl1_View view1;
     private Pnl2_View view2;
+    private Pnl3_View view3;
     private Pnl1_Ctrl ctrl1;
     private Pnl2_Ctrl ctrl2;
+    private Pnl3_Ctrl ctrl3;
     private Pnl2_Mdl mdl2;
 
     public Activity refAct;
@@ -30,6 +34,8 @@ public class PnlManager {
         mdl2= new Pnl2_Mdl();
         ctrl2= new Pnl2_Ctrl();
         view2= new Pnl2_View(context);
+        ctrl3= new Pnl3_Ctrl();
+        view3= new Pnl3_View(context);
 
         view1.setRefCtrl(ctrl1);
         ctrl1.refPnlManager= this;
@@ -59,6 +65,10 @@ public class PnlManager {
         if (p == 2 && pnl != 2) {
             refAct.setContentView(view2);
             pnl= 2;
+        }
+        if (p == 3 && pnl != 3) {
+            refAct.setContentView(view3);
+            pnl= 3;
         }
     }
 }

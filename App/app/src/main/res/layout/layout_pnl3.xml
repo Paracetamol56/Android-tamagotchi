@@ -10,16 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="226dp" />
 
+    <TextView
+        android:id="@+id/txtEntier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ceic est un ecran 3" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="101dp" />
+        android:layout_height="140dp" />
 
     <Button
         android:id="@+id/btnGotoPnl1"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-
+        android:layout_height="wrap_content"
         android:text="Go to panel 2" />
-
-
 </LinearLayout>
