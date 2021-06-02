@@ -15,7 +15,7 @@
         android:layout_height="101dp" />
 
     <Button
-        android:id="@+id/btnGotoPnl2"
+        android:id="@+id/btnGotoPnl1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
 

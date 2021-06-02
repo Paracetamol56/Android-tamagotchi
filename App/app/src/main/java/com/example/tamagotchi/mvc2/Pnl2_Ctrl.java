@@ -21,7 +21,7 @@ public class Pnl2_Ctrl implements View.OnClickListener {
         else if (view.getId() == R.id.btnRaz) {
             refMdl.raz();
         }
-        else if (view.getId() == R.id.btnGotoPnl2) {
+        else if (view.getId() == R.id.btnGotoPnl1) {
             refPnlManager.setPnl(1);
         }
         else if (view.getId() == R.id.btnGotoPnl3) {

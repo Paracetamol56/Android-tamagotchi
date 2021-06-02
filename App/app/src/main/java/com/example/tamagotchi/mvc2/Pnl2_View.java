@@ -35,8 +35,8 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnRaz = findViewById(R.id.btnRaz);
         txtEntier = findViewById(R.id.txtEntier);
 
-        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl2);
-        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl3);
+        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl1);
+        btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
     }
 
     public void setRefCtrl(Pnl2_Ctrl c) {

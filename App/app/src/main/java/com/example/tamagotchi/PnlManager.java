@@ -20,9 +20,11 @@ public class PnlManager {
     private Pnl1_View view1;
     private Pnl2_View view2;
     private Pnl3_View view3;
+
     private Pnl1_Ctrl ctrl1;
     private Pnl2_Ctrl ctrl2;
     private Pnl3_Ctrl ctrl3;
+
     private Pnl2_Mdl mdl2;
 
     public Activity refAct;
@@ -32,8 +34,10 @@ public class PnlManager {
         ctrl1= new Pnl1_Ctrl();
         view1= new Pnl1_View(context);
         mdl2= new Pnl2_Mdl();
+
         ctrl2= new Pnl2_Ctrl();
         view2= new Pnl2_View(context);
+
         ctrl3= new Pnl3_Ctrl();
         view3= new Pnl3_View(context);
 
@@ -44,6 +48,9 @@ public class PnlManager {
         ctrl2.refMdl= mdl2;
         view2.setRefCtrl(ctrl2);
         ctrl2.refPnlManager= this;
+
+        view3.setRefCtrl(ctrl3);
+        ctrl3.refPnlManager= this;
 
         refAct= (Activity)context;
 
