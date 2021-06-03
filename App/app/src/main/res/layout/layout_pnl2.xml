@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A4747"
     android:orientation="vertical">
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="226dp" />
-
-    <Button
-        android:id="@+id/btnPlus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+1" />
-
-    <Button
-        android:id="@+id/btnMoins"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="-1" />
-
-    <Button
-        android:id="@+id/btnRaz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RAZ" />
 
     <TextView
         android:id="@+id/txtEntier"
@@ -37,17 +15,98 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="49dp" />
+        android:layout_height="52dp" />
 
-    <Button
-        android:id="@+id/btnGotoPnl1"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to panel 1" />
+        app:srcCompat="@drawable/humpty_dumpty" />
 
-    <Button
-        android:id="@+id/btnGotoPnl3"
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="67dp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to panel 3" />
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="+1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnMoins"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="-1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnRaz"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="RAZ" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnGotoPnl1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/GoPnl1"
+            app:icon="@drawable/west_white_24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnGotoPnl3"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:text="@string/GoPnl3"
+            app:icon="@drawable/east_black_24dp"
+            app:iconGravity="end" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
 </LinearLayout>

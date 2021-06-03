@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Tamagotchi</string>
+    <string name="Settings">Settings</string>
+    <string name="Play">Play</string>
+    <string name="GoPnl1">Home</string>
+    <string name="GoPnl2">Game</string>
+    <string name="GoPnl3">Settings</string>
+
+
 </resources>
