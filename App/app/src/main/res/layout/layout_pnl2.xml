@@ -12,6 +12,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="Joue avec moi" />
 
@@ -19,11 +20,13 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="416dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         app:srcCompat="@drawable/humpty_dumpty" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="31dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:orientation="horizontal">
@@ -33,16 +36,25 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/minecrafthunger" />
+
         <TextView
             android:id="@+id/view2TextFaim"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
             android:layout_weight="1"
+            android:fontFamily="casual"
             android:gravity="center"
+            android:isScrollContainer="true"
             android:text="Faim" />
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="57dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -54,10 +66,18 @@
             android:gravity="center"
             android:text="Bonheur" />
 
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/coeur" />
+
         <Space
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+
     </LinearLayout>
 
     <TextView
@@ -126,6 +146,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <Space
