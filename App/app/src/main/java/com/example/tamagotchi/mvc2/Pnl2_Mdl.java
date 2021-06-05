@@ -5,7 +5,7 @@ import java.util.Observable;
 public class Pnl2_Mdl extends Observable
 {
     private int hunger;
-    private int happyness;
+    private int happiness;
 
     private Thread thread;
 
@@ -22,11 +22,11 @@ public class Pnl2_Mdl extends Observable
     public Pnl2_Mdl()
     {
         hunger= 0;
-        happyness = 100;
+        happiness = 100;
         mood = state.HAPPY;
 
-        previousTime = System.currentTimeMillis();
-        currentTime = 0;
+        currentTime = System.currentTimeMillis();
+        previousTime = currentTime;
 
         thread = new Thread() {
             @Override
@@ -34,19 +34,19 @@ public class Pnl2_Mdl extends Observable
                 try
                 {
                     while (true) {
-                        sleep(1000);
+                        thread.sleep(1000);
                         currentTime = System.currentTimeMillis();
-
-                        if (previousTime - currentTime > 3000) {
+                        
+                        if (previousTime - currentTime >= 3000) {
                             if (hunger < 100) {
                                 ++hunger;
                             }
 
-                            if (happyness > 0) {
-                                --happyness;
+                            if (happiness > 0) {
+                                --happiness;
                             }
 
-                            if (happyness < 50) {
+                            if (happiness < 50) {
                                 mood = state.SAD;
                             } else {
                                 mood = state.HAPPY;
@@ -58,9 +58,10 @@ public class Pnl2_Mdl extends Observable
                                 mood = state.HAPPY;
                             }
 
-                            if (hunger > 100 || happyness < 0) {
+                            if (hunger > 100 || happiness < 0) {
                                 mood = state.DEAD;
                             }
+
 
                             previousTime = currentTime;
 
@@ -69,9 +70,7 @@ public class Pnl2_Mdl extends Observable
                         }
                     }
                 }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                catch (InterruptedException e) {}
             }
         };
         thread.start();
@@ -82,9 +81,9 @@ public class Pnl2_Mdl extends Observable
         return hunger;
     }
 
-    public int getHappyness()
+    public int getHappiness()
     {
-        return happyness;
+        return happiness;
     }
 
     public state getMood()
@@ -94,17 +93,17 @@ public class Pnl2_Mdl extends Observable
 
     public void caresser()
     {
-        if (happyness < 100)
+        if (happiness < 100)
         {
-            happyness += 2;
+            happiness += 2;
         }
     }
 
     public void jouet()
     {
-        if (happyness < 100)
+        if (happiness < 100)
         {
-            happyness += 10;
+            happiness += 10;
         }
     }
 

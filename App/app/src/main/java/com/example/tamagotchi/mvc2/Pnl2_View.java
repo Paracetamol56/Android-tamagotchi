@@ -62,7 +62,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
         txtHeader.setText("Mes chaussettes sont salles");
 
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
-        txtBonheur.setText(Integer.toString(refMdl.getHappyness()));
+        txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
 
         switch (refMdl.getMood())
         {

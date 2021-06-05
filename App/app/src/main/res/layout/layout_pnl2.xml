@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/view2TextHeader"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:layout_marginTop="25dp"
@@ -39,14 +39,14 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="1dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/minecrafthunger" />
 
         <TextView
             android:id="@+id/view2TextFaim"
             android:layout_width="wrap_content"
-            android:layout_height="31dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
@@ -63,13 +63,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="casual"
             android:gravity="center"
             android:text="Bonheur" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="1dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/coeur" />
 
@@ -85,6 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginBottom="15dp"
+        android:fontFamily="casual"
         android:gravity="center"
         android:text="@string/Affichage" />
 

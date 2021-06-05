@@ -5,6 +5,8 @@
     <string name="GoPnl1">Home</string>
     <string name="GoPnl2">Game</string>
     <string name="GoPnl3">Settings</string>
-
-
+    <string name="Smoke">Smoke</string>
+    <string name="Eat">Fast-Food</string>
+    <string name="Drugs">Drugs</string>
+    <string name="Affichage">Message</string>
 </resources>
