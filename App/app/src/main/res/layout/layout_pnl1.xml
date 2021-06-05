@@ -50,7 +50,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnGotoPnl1"
+            android:id="@+id/btnGotoPnl2"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="end"

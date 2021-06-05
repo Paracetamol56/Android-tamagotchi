@@ -39,11 +39,11 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnNourrir = (Button)findViewById(R.id.btnNourrir);
 
         txtHeader = findViewById(R.id.view2TextHeader);
-        txtFaim = findViewById(R.id.view2TextFaim);
-        txtBonheur = findViewById(R.id.view2TextBonheur);
+        txtFaim = findViewById(R.id.txtHunger);
+        txtBonheur = findViewById(R.id.txtHappiness);
         txtMessage = findViewById(R.id.view2TextMessage);
 
-        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl1);
+        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl2);
         btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
     }
 

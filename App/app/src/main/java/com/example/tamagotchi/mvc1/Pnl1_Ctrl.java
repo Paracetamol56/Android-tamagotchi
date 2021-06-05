@@ -10,9 +10,11 @@ public class Pnl1_Ctrl implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.btnGotoPnl1) {
+        if (view.getId() == R.id.btnGotoPnl2) {
             refPnlManager.setPnl(2);
         }
+        if (view.getId() == R.id.btnGotoPnl3) {
+            refPnlManager.setPnl(3);
+        }
     }
-
 }

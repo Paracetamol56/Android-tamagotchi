@@ -22,7 +22,7 @@
         android:layout_height="140dp" />
 
     <Button
-        android:id="@+id/btnGotoPnl1"
+        android:id="@+id/btnGotoPnl2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Go to panel 2" />

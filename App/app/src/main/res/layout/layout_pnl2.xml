@@ -10,8 +10,8 @@
         android:id="@+id/view2TextHeader"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Joue avec moi" />
@@ -44,14 +44,14 @@
             app:srcCompat="@drawable/minecrafthunger" />
 
         <TextView
-            android:id="@+id/view2TextFaim"
+            android:id="@+id/txtHunger"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
             android:isScrollContainer="true"
-            android:text="Faim" />
+            android:text="0" />
 
         <Space
             android:layout_width="57dp"
@@ -59,13 +59,13 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/view2TextBonheur"
+            android:id="@+id/txtHappiness"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
-            android:text="Bonheur" />
+            android:text="100" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -157,7 +157,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnGotoPnl1"
+            android:id="@+id/btnGotoPnl2"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:fontFamily="casual"

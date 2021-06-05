@@ -16,17 +16,20 @@ public class Pnl2_Mdl extends Observable
     private state mood;
 
     long previousTime;
-    long currentTime;
 
     // Constructor
     public Pnl2_Mdl()
     {
+        // Initialize every variables
         hunger= 0;
         happiness = 100;
         mood = state.HAPPY;
 
-        currentTime = System.currentTimeMillis();
-        previousTime = currentTime;
+        // Apply changes and notify the view
+        setChanged();
+        notifyObservers();
+
+        previousTime = System.currentTimeMillis();
 
         thread = new Thread() {
             @Override
@@ -35,9 +38,9 @@ public class Pnl2_Mdl extends Observable
                 {
                     while (true) {
                         thread.sleep(1000);
-                        currentTime = System.currentTimeMillis();
+                        long currentTime = System.currentTimeMillis();
                         
-                        if (previousTime - currentTime >= 3000) {
+                        if (currentTime - previousTime >= 3000) {
                             if (hunger < 100) {
                                 ++hunger;
                             }
@@ -61,7 +64,6 @@ public class Pnl2_Mdl extends Observable
                             if (hunger > 100 || happiness < 0) {
                                 mood = state.DEAD;
                             }
-
 
                             previousTime = currentTime;
 
@@ -96,6 +98,8 @@ public class Pnl2_Mdl extends Observable
         if (happiness < 100)
         {
             happiness += 2;
+            setChanged();
+            notifyObservers();
         }
     }
 
@@ -104,6 +108,8 @@ public class Pnl2_Mdl extends Observable
         if (happiness < 100)
         {
             happiness += 10;
+            setChanged();
+            notifyObservers();
         }
     }
 
@@ -112,6 +118,8 @@ public class Pnl2_Mdl extends Observable
         if (hunger < 100)
         {
             hunger += 10;
+            setChanged();
+            notifyObservers();
         }
     }
 }
