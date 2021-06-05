@@ -13,10 +13,14 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class Pnl2_View extends LinearLayout implements Observer {
-    public Button btnPlus;
-    public Button btnMoins;
-    public Button btnRaz;
-    public TextView txtEntier;
+    public Button btnCaresse;
+    public Button btnJouet;
+    public Button btnNourrir;
+
+    public TextView txtHeader;
+    public TextView txtMessage;
+    public TextView txtFaim;
+    public TextView txtBonheur;
 
     public Pnl2_Mdl refMdl;
     public Pnl2_Ctrl refCtrl;
@@ -30,10 +34,14 @@ public class Pnl2_View extends LinearLayout implements Observer {
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
         inflater.inflate(R.layout.layout_pnl2, this);
 
-        btnPlus = findViewById(R.id.btnPlus);
-        btnMoins = findViewById(R.id.btnMoins);
-        btnRaz = findViewById(R.id.btnRaz);
-        txtEntier = findViewById(R.id.txtEntier);
+        btnCaresse = (Button)findViewById(R.id.btnCaresse);
+        btnJouet = (Button)findViewById(R.id.btnJouet);
+        btnNourrir = (Button)findViewById(R.id.btnNourrir);
+
+        txtHeader = findViewById(R.id.view2TextHeader);
+        txtFaim = findViewById(R.id.view2TextFaim);
+        txtBonheur = findViewById(R.id.view2TextBonheur);
+        txtMessage = findViewById(R.id.view2TextMessage);
 
         btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl1);
         btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
@@ -41,30 +49,31 @@ public class Pnl2_View extends LinearLayout implements Observer {
 
     public void setRefCtrl(Pnl2_Ctrl c) {
         refCtrl= c;
-        btnPlus.setOnClickListener(refCtrl);
-        btnMoins.setOnClickListener(refCtrl);
-        btnRaz.setOnClickListener(refCtrl);
+        btnCaresse.setOnClickListener(refCtrl);
+        btnJouet.setOnClickListener(refCtrl);
+        btnNourrir.setOnClickListener(refCtrl);
+
         btnGotoPnl1.setOnClickListener(refCtrl);
         btnGotoPnl3.setOnClickListener(refCtrl);
     }
 
     @Override
     public void update(Observable observable, Object o) {
-        txtEntier.setText(Integer.toString(refMdl.getNbVaccins()));
+        txtHeader.setText("Mes chaussettes sont salles");
 
-        if (refMdl.nbVaccinsMax()) {
-            btnPlus.setEnabled(true);
-        }
-        else {
-            btnPlus.setEnabled(false);
-        }
-        if (refMdl.nbVaccinsMin()) {
-            btnMoins.setEnabled(true);
-            btnRaz.setEnabled(true);
-        }
-        else {
-            btnMoins.setEnabled(false);
-            btnRaz.setEnabled(false);
+        txtFaim.setText(Integer.toString(refMdl.getHunger()));
+        txtBonheur.setText(Integer.toString(refMdl.getHappyness()));
+
+        switch (refMdl.getMood())
+        {
+            case HAPPY:
+                txtMessage.setText("Content");
+            case SAD:
+                txtMessage.setText("Triste");
+            case HUNGRY:
+                txtMessage.setText("Trop faim");
+            case DEAD:
+                txtMessage.setText("Dead");
         }
     }
 }

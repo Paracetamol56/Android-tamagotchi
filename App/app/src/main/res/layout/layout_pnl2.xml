@@ -7,56 +7,30 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/view2TextHeader"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
-        android:fontFamily="casual"
         android:gravity="center"
         android:text="Joue avec moi" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="416dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/humpty_dumpty" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="31dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="1dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/minecrafthunger" />
 
         <TextView
             android:id="@+id/view2TextFaim"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
             android:layout_weight="1"
-            android:fontFamily="casual"
             android:gravity="center"
-            android:isScrollContainer="true"
             android:text="Faim" />
-
-        <Space
-            android:layout_width="57dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/view2TextBonheur"
@@ -65,28 +39,14 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Bonheur" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="1dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/coeur" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
     </LinearLayout>
 
     <TextView
         android:id="@+id/view2TextMessage"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="@string/Affichage" />
+        android:text="Message" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,10 +63,7 @@
             android:id="@+id/btnCaresse"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="@string/Smoke"
-            android:textSize="12sp"
-            app:backgroundTint="#439775" />
+            android:text="Caresse" />
 
         <Space
             android:layout_width="wrap_content"
@@ -117,10 +74,7 @@
             android:id="@+id/btnJouet"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="@string/Eat"
-            android:textSize="12sp"
-            app:backgroundTint="#439775" />
+            android:text="Jouet" />
 
         <Space
             android:layout_width="wrap_content"
@@ -131,10 +85,7 @@
             android:id="@+id/btnNourrir"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
-            android:text="@string/Drugs"
-            android:textSize="12sp"
-            app:backgroundTint="#439775" />
+            android:text="Nourrir" />
 
         <Space
             android:layout_width="wrap_content"
@@ -146,7 +97,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <Space
@@ -158,9 +108,7 @@
             android:id="@+id/btnGotoPnl1"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
             android:text="@string/GoPnl1"
-            app:backgroundTint="#4F517D"
             app:icon="@drawable/west_white_24dp" />
 
         <Space
@@ -172,10 +120,8 @@
             android:id="@+id/btnGotoPnl3"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:fontFamily="casual"
             android:isScrollContainer="true"
             android:text="@string/GoPnl3"
-            app:backgroundTint="#4F517D"
             app:icon="@drawable/east_black_24dp"
             app:iconGravity="end" />
 
@@ -185,6 +131,3 @@
             android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>
-
-
-
