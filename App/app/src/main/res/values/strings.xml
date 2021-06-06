@@ -9,4 +9,11 @@
     <string name="Eat">Fast-Food</string>
     <string name="Drugs">Drugs</string>
     <string name="Affichage">Message</string>
+    <string name="Faim">Faim</string>
+    <string name="Bonheur">Bonheur</string>
+    <string name="Config">Configuration</string>
+    <string name="NameTamagotchi">Nom du tamagotchi :</string>
+    <string name="Name">Votre nom :</string>
+    <string name="InputTamagotchi">Entrez le nom du tamagotchi...</string>
+    <string name="InputPlayer">Entrez le nom du joueur...</string>
 </resources>

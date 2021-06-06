@@ -1,29 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A4747"
     android:orientation="vertical">
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="226dp" />
+        android:layout_height="29dp" />
 
     <TextView
-        android:id="@+id/txtEntier"
+        android:id="@+id/Configuration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:fontFamily="casual"
         android:gravity="center"
-        android:text="Ceic est un ecran 3" />
+        android:text="@string/Config"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="36sp" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="140dp" />
+        android:layout_height="404dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Nom_tamagotchi"
+            android:layout_width="191dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:gravity="center_vertical"
+            android:text="@string/NameTamagotchi"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/input_Tamagotchi_name"
+            android:layout_width="183dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:gravity="center_vertical"
+            android:text="@string/InputTamagotchi"
+            android:textColor="#888282"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/PlayerName"
+            android:layout_width="299dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:gravity="center_vertical"
+            android:text="@string/Name"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="294dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:gravity="center_vertical"
+            android:text="@string/InputPlayer"
+            android:textColor="#888282"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="39dp" />
 
     <Button
         android:id="@+id/btnGotoPnl2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to panel 2" />
+        android:layout_marginStart="105dp"
+        android:layout_marginLeft="105dp"
+        android:text="@string/GoPnl2"
+        app:backgroundTint="#4F517D" />
+
 </LinearLayout>
