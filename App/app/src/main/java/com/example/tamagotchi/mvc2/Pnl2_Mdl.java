@@ -15,7 +15,7 @@ public class Pnl2_Mdl extends Observable
     }
     private state mood;
 
-    long previousTime;
+    private long previousTime;
 
     // Constructor
     public Pnl2_Mdl()

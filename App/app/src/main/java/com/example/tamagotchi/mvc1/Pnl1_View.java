@@ -20,7 +20,7 @@ public class Pnl1_View extends LinearLayout {
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
         inflater.inflate(R.layout.layout_pnl1, this);
 
-        btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl2);
+        btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl1);
         btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
     }
 

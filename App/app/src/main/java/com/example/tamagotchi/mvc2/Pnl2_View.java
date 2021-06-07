@@ -38,13 +38,13 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnJouet = (Button)findViewById(R.id.btnJouet);
         btnNourrir = (Button)findViewById(R.id.btnNourrir);
 
-        txtHeader = findViewById(R.id.view2TextHeader);
+        txtHeader = findViewById(R.id.txtHeader);
         txtFaim = findViewById(R.id.txtHunger);
         txtBonheur = findViewById(R.id.txtHappiness);
-        txtMessage = findViewById(R.id.view2TextMessage);
+        txtMessage = findViewById(R.id.txtMessage);
 
-        btnGotoPnl1= (Button)findViewById(R.id.btnGotoPnl2);
-        btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
+        btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl1);
+        btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
     }
 
     public void setRefCtrl(Pnl2_Ctrl c) {
@@ -64,7 +64,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
         txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
 
-        switch (refMdl.getMood())
+        /*switch (refMdl.getMood())
         {
             case HAPPY:
                 txtMessage.setText("Content");
@@ -74,6 +74,6 @@ public class Pnl2_View extends LinearLayout implements Observer {
                 txtMessage.setText("Trop faim");
             case DEAD:
                 txtMessage.setText("Dead");
-        }
+        }*/
     }
 }
