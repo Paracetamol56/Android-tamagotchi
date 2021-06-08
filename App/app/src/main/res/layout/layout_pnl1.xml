@@ -32,7 +32,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
-        app:srcCompat="@drawable/humpty_dumpty" />
+        app:srcCompat="@drawable/heureux" />
 
     <Space
         android:layout_width="match_parent"

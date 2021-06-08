@@ -23,7 +23,7 @@
         android:layout_height="342dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        app:srcCompat="@drawable/humpty_dumpty" />
+        app:srcCompat="@drawable/drogue" />
 
     <LinearLayout
         android:layout_width="match_parent"
