@@ -15,9 +15,9 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class Pnl2_View extends LinearLayout implements Observer {
-    public Button btnCaresse;
-    public Button btnJouet;
-    public Button btnNourrir;
+    public Button btnSmoke;
+    public Button btnFastFood;
+    public Button btnDrugs;
 
     public TextView txtHeader;
     public TextView txtMessage;
@@ -38,9 +38,9 @@ public class Pnl2_View extends LinearLayout implements Observer {
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
         inflater.inflate(R.layout.layout_pnl2, this);
 
-        btnCaresse = (Button)findViewById(R.id.btnCaresse);
-        btnJouet = (Button)findViewById(R.id.btnJouet);
-        btnNourrir = (Button)findViewById(R.id.btnNourrir);
+        btnSmoke = (Button)findViewById(R.id.btnSmoke);
+        btnFastFood = (Button)findViewById(R.id.btnFastFood);
+        btnDrugs = (Button)findViewById(R.id.btnDrugs);
 
         txtHeader = (TextView)findViewById(R.id.txtHeader);
         txtFaim = (TextView)findViewById(R.id.txtHunger);
@@ -55,9 +55,9 @@ public class Pnl2_View extends LinearLayout implements Observer {
 
     public void setRefCtrl(Pnl2_Ctrl c) {
         refCtrl= c;
-        btnCaresse.setOnClickListener(refCtrl);
-        btnJouet.setOnClickListener(refCtrl);
-        btnNourrir.setOnClickListener(refCtrl);
+        btnSmoke.setOnClickListener(refCtrl);
+        btnFastFood.setOnClickListener(refCtrl);
+        btnDrugs.setOnClickListener(refCtrl);
 
         btnGotoPnl1.setOnClickListener(refCtrl);
         btnGotoPnl3.setOnClickListener(refCtrl);
@@ -89,7 +89,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
                 break;
             case DEAD:
                 txtMessage.setText("Dead");
-                State.setImageResource(R.drawable.drogue);
+                State.setImageResource(R.drawable.mort);
                 break;
         }
     }

@@ -12,14 +12,14 @@ public class Pnl2_Ctrl implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.btnCaresse) {
-            refMdl.caresser();
+        if (view.getId() == R.id.btnSmoke) {
+            refMdl.smoke();
         }
-        else if (view.getId() == R.id.btnJouet) {
-            refMdl.jouet();
+        else if (view.getId() == R.id.btnFastFood) {
+            refMdl.fastFood();
         }
-        else if (view.getId() == R.id.btnNourrir) {
-            refMdl.nourrir();
+        else if (view.getId() == R.id.btnDrugs) {
+            refMdl.drugs();
         }
         else if (view.getId() == R.id.btnGotoPnl1) {
             refPnlManager.setPnl(1);

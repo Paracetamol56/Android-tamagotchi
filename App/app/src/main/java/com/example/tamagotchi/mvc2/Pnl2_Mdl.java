@@ -89,27 +89,29 @@ public class Pnl2_Mdl extends Observable
     private Runnable mToastRunnable = new Runnable() {
         @Override
         public void run() {
-            if (hunger < 100) {
-                ++hunger;
-            }
+            if (mood != state.DEAD)
+            {
+                if (hunger < 100) {
+                    ++hunger;
+                }
 
-            if (happiness > 0) {
-                --happiness;
+                if (happiness > 0) {
+                    --happiness;
+                }
             }
 
             if (happiness < 50) {
                 mood = state.SAD;
-            } else {
+            }
+            else {
                 mood = state.HAPPY;
             }
 
             if (hunger > 50) {
                 mood = state.HUNGRY;
-            } else {
-                mood = state.HAPPY;
             }
 
-            if (hunger > 100 || happiness < 0) {
+            if (hunger == 100 || happiness == 0) {
                 mood = state.DEAD;
             }
 
@@ -118,7 +120,7 @@ public class Pnl2_Mdl extends Observable
 
             Log.i("YES", "MAN");
 
-            m_Handler.postDelayed(this, 3000);
+            m_Handler.postDelayed(this, 500);
         }
     };
 
@@ -137,33 +139,47 @@ public class Pnl2_Mdl extends Observable
         return mood;
     }
 
-    public void caresser()
+    public void smoke()
     {
-        if (happiness < 100)
+        if (happiness < 91)
         {
-            happiness += 2;
+            happiness += 10;
+        }
+        else
+        {
+            happiness = 100;
+        }
+        setChanged();
+        notifyObservers();
+    }
+
+    public void fastFood()
+    {
+        if (hunger > 9)
+        {
+            hunger -= 10;
             setChanged();
             notifyObservers();
         }
+        else
+        {
+            hunger = 0;
+        }
+        setChanged();
+        notifyObservers();
     }
 
-    public void jouet()
+    public void drugs()
     {
         if (happiness < 100)
         {
             happiness += 10;
-            setChanged();
-            notifyObservers();
         }
-    }
-
-    public void nourrir()
-    {
-        if (hunger < 100)
+        else
         {
-            hunger += 10;
-            setChanged();
-            notifyObservers();
+            happiness = 100;
         }
+        setChanged();
+        notifyObservers();
     }
 }

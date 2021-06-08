@@ -105,7 +105,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnCaresse"
+            android:id="@+id/btnSmoke"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
@@ -119,7 +119,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnJouet"
+            android:id="@+id/btnFastFood"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
@@ -133,7 +133,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/btnNourrir"
+            android:id="@+id/btnDrugs"
             android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
