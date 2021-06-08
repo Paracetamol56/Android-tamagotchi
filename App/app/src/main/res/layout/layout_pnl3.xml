@@ -24,7 +24,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="316dp" />
+        android:layout_height="198dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -113,7 +113,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="80dp" />
+        android:layout_height="186dp" />
 
     <Button
         android:id="@+id/btnGotoPnl1"
@@ -122,7 +122,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:fontFamily="casual"
-        android:text="@string/GoPnl1"
+        android:text="@string/GoPnl2"
         app:backgroundTint="#4F517D"
         app:icon="@drawable/west_white_24dp" />
 
