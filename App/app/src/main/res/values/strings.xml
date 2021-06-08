@@ -14,4 +14,6 @@
     <string name="Name">Votre nom :</string>
     <string name="InputTamagotchi">Entrez le nom du tamagotchi...</string>
     <string name="InputPlayer">Entrez le nom du joueur...</string>
+    <string name="Reset">Reset</string>
+
 </resources>
