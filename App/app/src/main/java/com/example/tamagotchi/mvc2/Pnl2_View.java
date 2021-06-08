@@ -2,6 +2,7 @@ package com.example.tamagotchi.mvc2;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -38,10 +39,10 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnJouet = (Button)findViewById(R.id.btnJouet);
         btnNourrir = (Button)findViewById(R.id.btnNourrir);
 
-        txtHeader = findViewById(R.id.txtHeader);
-        txtFaim = findViewById(R.id.txtHunger);
-        txtBonheur = findViewById(R.id.txtHappiness);
-        txtMessage = findViewById(R.id.txtMessage);
+        txtHeader = (TextView)findViewById(R.id.txtHeader);
+        txtFaim = (TextView)findViewById(R.id.txtHunger);
+        txtBonheur = (TextView)findViewById(R.id.txtHappiness);
+        txtMessage = (TextView)findViewById(R.id.txtMessage);
 
         btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl1);
         btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
@@ -61,10 +62,13 @@ public class Pnl2_View extends LinearLayout implements Observer {
     public void update(Observable observable, Object o) {
         txtHeader.setText("Mes chaussettes sont salles");
 
-        txtFaim.setText(Integer.toString(refMdl.getHunger()));
-        txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
+        Log.i("yo", findViewById(R.id.txtHunger).toString());
+        Log.i("yo", findViewById(R.id.txtHunger).toString());
 
-        /*switch (refMdl.getMood())
+        //txtFaim.setText(Integer.toString(refMdl.getHunger()));
+        //txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
+
+        switch (refMdl.getMood())
         {
             case HAPPY:
                 txtMessage.setText("Content");
@@ -74,6 +78,6 @@ public class Pnl2_View extends LinearLayout implements Observer {
                 txtMessage.setText("Trop faim");
             case DEAD:
                 txtMessage.setText("Dead");
-        }*/
+        }
     }
 }

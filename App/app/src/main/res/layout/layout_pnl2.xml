@@ -33,7 +33,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <ImageView
@@ -54,7 +54,7 @@
 
         <Space
             android:layout_width="57dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <TextView
@@ -75,7 +75,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -145,24 +145,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="163dp"
-            android:layout_marginLeft="163dp"
-            android:layout_marginBottom="0dp"
-            android:fontFamily="casual"
-            android:gravity="center_horizontal"
-            android:text="@string/Drugs"
-            app:backgroundTint="#48bf84" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="20dp"
@@ -170,7 +152,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <Button
@@ -184,7 +166,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
 
         <Button
@@ -200,7 +182,7 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>
