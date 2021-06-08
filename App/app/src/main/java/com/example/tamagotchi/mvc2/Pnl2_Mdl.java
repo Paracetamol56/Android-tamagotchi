@@ -19,6 +19,29 @@ public class Pnl2_Mdl extends Observable
     }
     private state mood;
 
+    public enum drug
+    {
+        CANNABIS,
+        COCAINE,
+        OPIUM,
+        MORPHINE,
+        LSD,
+        GHB,
+        METHAMPHETAMINE,
+        PSYCHOANALEPTIQUES,
+        THYMOANALEPTIQUES
+    }
+
+    // CANNABIS : delta9-tétrahydrocannabinol
+    // COCAINE : chlorhydrate de cocaïne
+    // OPIUM
+    // MORPHINE
+    // LSD : diéthyllysergamide
+    // GHB : acide GammaHydroxyButyrique
+    // METHAMPHETAMINE : méthamphétamine
+    // PSYCHOANALEPTIQUES psychoanaleptiques
+    // THYMOANALEPTIQUES : thymoanaleptiques
+
     private long previousTime;
 
     // Constructor
@@ -33,57 +56,7 @@ public class Pnl2_Mdl extends Observable
         setChanged();
         notifyObservers();
 
-        m_Handler.postDelayed(mToastRunnable, 1000);
-
-        /*
-        previousTime = System.currentTimeMillis();
-
-        thread = new Thread() {
-            @Override
-            public void run() {
-                try
-                {
-                    while (true) {
-                        thread.sleep(1000);
-
-                        long currentTime = System.currentTimeMillis();
-                        
-                        if (currentTime - previousTime >= 3000) {
-                            if (hunger < 100) {
-                                ++hunger;
-                            }
-
-                            if (happiness > 0) {
-                                --happiness;
-                            }
-
-                            if (happiness < 50) {
-                                mood = state.SAD;
-                            } else {
-                                mood = state.HAPPY;
-                            }
-
-                            if (hunger > 50) {
-                                mood = state.HUNGRY;
-                            } else {
-                                mood = state.HAPPY;
-                            }
-
-                            if (hunger > 100 || happiness < 0) {
-                                mood = state.DEAD;
-                            }
-
-                            previousTime = currentTime;
-
-                            //setChanged();
-                            //notifyObservers();
-                        }
-                    }
-                }
-                catch (InterruptedException e) {}
-            }
-        };
-        thread.start();*/
+        m_Handler.postDelayed(mToastRunnable, 500);
     }
 
     private Runnable mToastRunnable = new Runnable() {
