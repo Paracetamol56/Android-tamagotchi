@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.example.tamagotchi.R;
+import com.example.tamagotchi.mvc2.Pnl2_Ctrl;
 
 public class Pnl3_View extends LinearLayout {
     public Pnl3_Ctrl refCtrl;
@@ -31,7 +32,7 @@ public class Pnl3_View extends LinearLayout {
     public void setRefCtrl(Pnl3_Ctrl c) {
         refCtrl= c;
         btnGotoPnl2.setOnClickListener(refCtrl);
+        txtTamagotchiName.setOnClickListener(refCtrl);
+        txtPlayerName.setOnClickListener(refCtrl);
     }
-
-
 }
