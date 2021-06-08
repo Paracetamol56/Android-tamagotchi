@@ -24,7 +24,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="404dp" />
+        android:layout_height="316dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,8 +46,8 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/input_Tamagotchi_name"
+        <EditText
+            android:id="@+id/inputTamagotchiName"
             android:layout_width="183dp"
             android:layout_height="55dp"
             android:layout_marginStart="5dp"
@@ -57,6 +57,7 @@
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center_vertical"
+            android:inputType="text"
             android:text="@string/InputTamagotchi"
             android:textColor="#888282"
             android:textSize="12sp" />
@@ -82,8 +83,8 @@
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/playerName"
+        <EditText
+            android:id="@+id/inputPlayerName"
             android:layout_width="294dp"
             android:layout_height="45dp"
             android:layout_marginStart="10dp"
@@ -94,6 +95,7 @@
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center_vertical"
+            android:inputType="text"
             android:text="@string/InputPlayer"
             android:textColor="#888282"
             android:textSize="12sp" />
@@ -105,11 +107,12 @@
 
     <Button
         android:id="@+id/btnGotoPnl1"
-        android:layout_width="133dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginLeft="135dp"
-        android:text="@string/GoPnl2"
-        app:backgroundTint="#4F517D" />
+        android:layout_gravity="center"
+        android:fontFamily="casual"
+        android:text="@string/GoPnl1"
+        app:backgroundTint="#4F517D"
+        app:icon="@drawable/west_white_24dp" />
 
 </LinearLayout>
