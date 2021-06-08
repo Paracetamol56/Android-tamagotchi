@@ -90,6 +90,9 @@ public class Pnl2_View extends LinearLayout implements Observer {
             case DEAD:
                 txtMessage.setText("Dead");
                 State.setImageResource(R.drawable.mort);
+                btnDrugs.setEnabled(false);
+                btnFastFood.setEnabled(false);
+                btnSmoke.setEnabled(false);
                 break;
             case OVERDOSE :
                 txtMessage.setText("Tu fais une overdose");

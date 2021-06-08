@@ -28,13 +28,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/Nom_tamagotchi"
-            android:layout_width="191dp"
-            android:layout_height="55dp"
+            android:layout_width="359dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="5dp"
@@ -44,35 +44,45 @@
             android:gravity="center_vertical"
             android:text="@string/NameTamagotchi"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/inputTamagotchiName"
-            android:layout_width="183dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:fontFamily="casual"
-            android:gravity="center_vertical"
-            android:inputType="text"
-            android:text="@string/InputTamagotchi"
-            android:textColor="#888282"
-            android:textSize="12sp" />
+            android:textColorHint="#439775"
+            app:hintTextColor="#4F517D">
+
+            <EditText
+                android:id="@+id/inputTamagotchiName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="casual"
+                android:hint="@string/InputTamagotchi"
+                android:inputType="text"
+                android:textColor="#979595"
+                android:textColorHint="#808080"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/PlayerName"
-            android:layout_width="299dp"
-            android:layout_height="45dp"
+            android:layout_width="309dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
@@ -81,24 +91,34 @@
             android:gravity="center_vertical"
             android:text="@string/Name"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="24sp" />
 
-        <EditText
-            android:id="@+id/inputPlayerName"
-            android:layout_width="294dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:fontFamily="casual"
-            android:gravity="center_vertical"
-            android:inputType="text"
-            android:text="@string/InputPlayer"
-            android:textColor="#888282"
-            android:textSize="12sp" />
+            android:textColorHint="#439775"
+            app:hintTextColor="#4F517D">
+
+            <EditText
+                android:id="@+id/inputPlayerName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|left"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="casual"
+                android:hint="@string/InputPlayer"
+                android:inputType="text"
+                android:textColor="#888282"
+                android:textColorHint="#FFFFFF"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
@@ -113,7 +133,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="186dp" />
+        android:layout_height="138dp" />
 
     <Button
         android:id="@+id/btnGotoPnl1"
