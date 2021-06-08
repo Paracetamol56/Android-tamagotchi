@@ -20,8 +20,8 @@ public class Pnl2_View extends LinearLayout implements Observer {
 
     public TextView txtHeader;
     public TextView txtMessage;
-    public TextView txtFaim;
-    public TextView txtBonheur;
+    public TextView txtHunger;
+    public TextView txtHappiness;
 
     public Pnl2_Mdl refMdl;
     public Pnl2_Ctrl refCtrl;
@@ -40,8 +40,8 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnNourrir = (Button)findViewById(R.id.btnNourrir);
 
         txtHeader = (TextView)findViewById(R.id.txtHeader);
-        txtFaim = (TextView)findViewById(R.id.txtHunger);
-        txtBonheur = (TextView)findViewById(R.id.txtHappiness);
+        txtHunger = (TextView)findViewById(R.id.txtHunger);
+        txtHappiness = (TextView)findViewById(R.id.txtHappiness);
         txtMessage = (TextView)findViewById(R.id.txtMessage);
 
         btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl1);
@@ -62,22 +62,23 @@ public class Pnl2_View extends LinearLayout implements Observer {
     public void update(Observable observable, Object o) {
         txtHeader.setText("Mes chaussettes sont sales");
 
-        Log.i("yo", findViewById(R.id.txtHunger).toString());
-        Log.i("yo", findViewById(R.id.txtHunger).toString());
-
-        //txtFaim.setText(Integer.toString(refMdl.getHunger()));
-        //txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
+        txtHunger.setText(Integer.toString(refMdl.getHunger()));
+        txtHappiness.setText(Integer.toString(refMdl.getHappiness()));
 
         switch (refMdl.getMood())
         {
             case HAPPY:
                 txtMessage.setText("Content");
+                break;
             case SAD:
                 txtMessage.setText("Triste");
+                break;
             case HUNGRY:
                 txtMessage.setText("Trop faim");
+                break;
             case DEAD:
                 txtMessage.setText("Dead");
+                break;
         }
     }
 }
