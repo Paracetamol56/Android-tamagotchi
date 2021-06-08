@@ -9,13 +9,14 @@ public class Pnl2_Mdl extends Observable
 {
     private int hunger;
     private int happiness;
+    private int Overdose;
 
     private Thread thread;
     private Handler m_Handler = new Handler();
 
     public enum state
     {
-        HAPPY, SAD, HUNGRY, DEAD
+        HAPPY, SAD, HUNGRY, DEAD, OVERDOSE
     }
     private state mood;
 
@@ -50,13 +51,14 @@ public class Pnl2_Mdl extends Observable
         // Initialize every variables
         hunger = 0;
         happiness = 100;
+        Overdose = 0;
         mood = state.HAPPY;
 
         // Apply changes and notify the view
         setChanged();
         notifyObservers();
 
-        m_Handler.postDelayed(mToastRunnable, 500);
+        m_Handler.postDelayed(mToastRunnable, 2000);
     }
 
     private Runnable mToastRunnable = new Runnable() {
@@ -65,11 +67,15 @@ public class Pnl2_Mdl extends Observable
             if (mood != state.DEAD)
             {
                 if (hunger < 100) {
-                    ++hunger;
+                    hunger+=1;
                 }
 
                 if (happiness > 0) {
-                    --happiness;
+                    happiness-=1;
+                }
+
+                if (Overdose >0){
+                    --Overdose;
                 }
             }
 
@@ -84,16 +90,24 @@ public class Pnl2_Mdl extends Observable
                 mood = state.HUNGRY;
             }
 
-            if (hunger == 100 || happiness == 0) {
+            if (Overdose >= 90){
+                mood= state.OVERDOSE;
+            }
+
+            if (hunger == 100 || happiness == 0 || Overdose >=100) {
                 mood = state.DEAD;
             }
+
+
+
+
 
             setChanged();
             notifyObservers();
 
             Log.i("YES", "MAN");
 
-            m_Handler.postDelayed(this, 500);
+            m_Handler.postDelayed(this, 2000);
         }
     };
 
@@ -144,13 +158,15 @@ public class Pnl2_Mdl extends Observable
 
     public void drugs()
     {
-        if (happiness < 100)
+        if (happiness < 91)
         {
-            happiness += 10;
+            happiness = 100;
+            Overdose +=10;
         }
         else
         {
             happiness = 100;
+            Overdose +=10;
         }
         setChanged();
         notifyObservers();
