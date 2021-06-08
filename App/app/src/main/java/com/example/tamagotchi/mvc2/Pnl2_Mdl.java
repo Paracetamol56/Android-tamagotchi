@@ -1,5 +1,8 @@
 package com.example.tamagotchi.mvc2;
 
+import android.os.Handler;
+import android.util.Log;
+
 import java.util.Observable;
 
 public class Pnl2_Mdl extends Observable
@@ -8,6 +11,7 @@ public class Pnl2_Mdl extends Observable
     private int happiness;
 
     private Thread thread;
+    private Handler m_Handler = new Handler();
 
     public enum state
     {
@@ -21,7 +25,7 @@ public class Pnl2_Mdl extends Observable
     public Pnl2_Mdl()
     {
         // Initialize every variables
-        hunger= 0;
+        hunger = 0;
         happiness = 100;
         mood = state.HAPPY;
 
@@ -29,6 +33,9 @@ public class Pnl2_Mdl extends Observable
         setChanged();
         notifyObservers();
 
+        m_Handler.postDelayed(mToastRunnable, 1000);
+
+        /*
         previousTime = System.currentTimeMillis();
 
         thread = new Thread() {
@@ -38,6 +45,7 @@ public class Pnl2_Mdl extends Observable
                 {
                     while (true) {
                         thread.sleep(1000);
+
                         long currentTime = System.currentTimeMillis();
                         
                         if (currentTime - previousTime >= 3000) {
@@ -67,16 +75,52 @@ public class Pnl2_Mdl extends Observable
 
                             previousTime = currentTime;
 
-                            setChanged();
-                            notifyObservers();
+                            //setChanged();
+                            //notifyObservers();
                         }
                     }
                 }
                 catch (InterruptedException e) {}
             }
         };
-        thread.start();
+        thread.start();*/
     }
+
+    private Runnable mToastRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if (hunger < 100) {
+                ++hunger;
+            }
+
+            if (happiness > 0) {
+                --happiness;
+            }
+
+            if (happiness < 50) {
+                mood = state.SAD;
+            } else {
+                mood = state.HAPPY;
+            }
+
+            if (hunger > 50) {
+                mood = state.HUNGRY;
+            } else {
+                mood = state.HAPPY;
+            }
+
+            if (hunger > 100 || happiness < 0) {
+                mood = state.DEAD;
+            }
+
+            setChanged();
+            notifyObservers();
+
+            Log.i("YES", "MAN");
+
+            m_Handler.postDelayed(this, 3000);
+        }
+    };
 
     public int getHunger()
     {
