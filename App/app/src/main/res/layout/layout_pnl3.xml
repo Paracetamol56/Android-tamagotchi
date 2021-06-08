@@ -105,10 +105,10 @@
 
     <Button
         android:id="@+id/btnGotoPnl1"
-        android:layout_width="match_parent"
+        android:layout_width="133dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginLeft="105dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginLeft="135dp"
         android:text="@string/GoPnl2"
         app:backgroundTint="#4F517D" />
 

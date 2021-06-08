@@ -60,7 +60,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
-        txtHeader.setText("Mes chaussettes sont salles");
+        txtHeader.setText("Mes chaussettes sont sales");
 
         Log.i("yo", findViewById(R.id.txtHunger).toString());
         Log.i("yo", findViewById(R.id.txtHunger).toString());

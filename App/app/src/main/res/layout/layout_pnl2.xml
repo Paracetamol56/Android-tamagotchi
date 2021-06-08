@@ -14,7 +14,8 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="Joue avec moi" />
+        android:text="Joue avec moi"
+        android:textColor="#FFFFFF" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -50,7 +51,8 @@
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
-            android:text="0" />
+            android:text="0"
+            android:textColor="#FFFFFF" />
 
         <Space
             android:layout_width="57dp"
@@ -64,7 +66,8 @@
             android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
-            android:text="100" />
+            android:text="100"
+            android:textColor="#FFFFFF" />
 
         <ImageView
             android:id="@+id/imageView7"
@@ -87,7 +90,8 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="casual"
         android:gravity="center"
-        android:text="@string/Affichage" />
+        android:text="@string/Affichage"
+        android:textColor="#FFFFFF" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -121,7 +125,7 @@
             android:fontFamily="casual"
             android:text="@string/Eat"
             android:textSize="12sp"
-            app:backgroundTint="#48bf84" />
+            app:backgroundTint="#439775" />
 
         <Space
             android:layout_width="wrap_content"
