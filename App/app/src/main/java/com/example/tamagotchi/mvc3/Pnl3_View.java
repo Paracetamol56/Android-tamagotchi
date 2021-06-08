@@ -19,6 +19,9 @@ public class Pnl3_View extends LinearLayout {
     private EditText txtTamagotchiName;//TextView remplace par EditText
     private EditText txtPlayerName;
 
+    public String TamagotchiName;
+    public String PlayerName;
+
 
     public Pnl3_View(Context context) {
         super(context);
@@ -28,8 +31,13 @@ public class Pnl3_View extends LinearLayout {
 
         btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl1);
 
+
         txtTamagotchiName = (EditText) findViewById(R.id.inputTamagotchiName);
         txtTamagotchiName = (EditText) findViewById(R.id.inputPlayerName);
+
+        //GetValues
+        //TamagotchiName = txtTamagotchiName.getText().toString();
+        //PlayerName = txtPlayerName.getText().toString();
 
 
     }

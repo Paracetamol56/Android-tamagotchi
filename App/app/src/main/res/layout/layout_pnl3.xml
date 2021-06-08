@@ -57,7 +57,6 @@
                 android:id="@+id/inputTamagotchiName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="right"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginEnd="10dp"
@@ -69,7 +68,7 @@
                 android:inputType="text"
                 android:textColor="#979595"
                 android:textColorHint="#808080"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
@@ -104,7 +103,6 @@
                 android:id="@+id/inputPlayerName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="right|left"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="0dp"
@@ -133,7 +131,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="138dp" />
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/btnGotoPnl1"
