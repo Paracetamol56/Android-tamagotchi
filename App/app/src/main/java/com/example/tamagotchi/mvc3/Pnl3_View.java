@@ -6,16 +6,23 @@ import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.tamagotchi.R;
 import com.example.tamagotchi.mvc2.Pnl2_Ctrl;
+
+import org.w3c.dom.Text;
 
 public class Pnl3_View extends LinearLayout {
     public Pnl3_Ctrl refCtrl;
     public Button btnGotoPnl2;
 
-    private EditText txtTamagotchiName;
+    private EditText txtTamagotchiName;//TextView remplace par EditText
     private EditText txtPlayerName;
+
+    public String TamagotchiName;
+    public String PlayerName;
+
 
     public Pnl3_View(Context context) {
         super(context);
@@ -25,8 +32,15 @@ public class Pnl3_View extends LinearLayout {
 
         btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl1);
 
-        txtTamagotchiName = (EditText)findViewById(R.id.inputTamagotchiName);
-        txtTamagotchiName = (EditText)findViewById(R.id.inputPlayerName);
+
+        txtTamagotchiName = (EditText) findViewById(R.id.inputTamagotchiName);
+        txtTamagotchiName = (EditText) findViewById(R.id.inputPlayerName);
+
+        //GetValues
+        //TamagotchiName = txtTamagotchiName.getText().toString();
+        //PlayerName = txtPlayerName.getText().toString();
+
+
     }
 
     public void setRefCtrl(Pnl3_Ctrl c) {

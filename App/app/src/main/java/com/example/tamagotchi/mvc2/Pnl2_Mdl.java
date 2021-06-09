@@ -90,7 +90,7 @@ public class Pnl2_Mdl extends Observable
                 mood = state.HUNGRY;
             }
 
-            if (Overdose >= 90){
+            if (Overdose >= 80){
                 mood= state.OVERDOSE;
             }
 
