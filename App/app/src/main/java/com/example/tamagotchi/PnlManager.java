@@ -55,6 +55,8 @@ public class PnlManager {
         refAct= (Activity)context;
 
         mdl2.addObserver(view2);
+
+        ctrl3.refView = view3;
     }
 
     public static com.example.tamagotchi.PnlManager getInstance(Context context) {

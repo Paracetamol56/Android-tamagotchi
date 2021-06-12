@@ -49,26 +49,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColorHint="#439775"
-            app:hintTextColor="#4F517D">
+            android:layout_weight="1">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputTamagotchiName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                android:fontFamily="casual"
-                android:hint="@string/InputTamagotchi"
-                android:inputType="text"
-                android:textColor="#979595"
-                android:textColorHint="#808080"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
@@ -95,27 +81,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColorHint="#439775"
-            app:hintTextColor="#4F517D">
+            android:layout_weight="1">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/inputPlayerName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                android:fontFamily="casual"
-                android:hint="@string/InputPlayer"
-                android:inputType="text"
-                android:textColor="#888282"
-                android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
@@ -131,7 +102,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="126dp" />
 
     <Button
         android:id="@+id/btnGotoPnl1"

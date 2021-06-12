@@ -1,5 +1,6 @@
 package com.example.tamagotchi.mvc3;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,20 +11,24 @@ import android.widget.TextView;
 
 import com.example.tamagotchi.R;
 import com.example.tamagotchi.mvc2.Pnl2_Ctrl;
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.w3c.dom.Text;
 
-public class Pnl3_View extends LinearLayout {
+import java.util.Observable;
+import java.util.Observer;
+
+public class Pnl3_View extends LinearLayout implements Observer{
     public Pnl3_Ctrl refCtrl;
     public Button btnGotoPnl2;
+    public Pnl3_Mdl refMdl;
 
-    private EditText txtTamagotchiName;//TextView remplace par EditText
-    private EditText txtPlayerName;
-
-    public String TamagotchiName;
-    public String PlayerName;
+    public TextInputEditText TamagotchiName;
+    public TextInputEditText PlayerName;
 
 
+
+    @SuppressLint("WrongViewCast")
     public Pnl3_View(Context context) {
         super(context);
 
@@ -32,13 +37,9 @@ public class Pnl3_View extends LinearLayout {
 
         btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl1);
 
+        TamagotchiName =(TextInputEditText)findViewById(R.id.inputTamagotchiName);
+        PlayerName=(TextInputEditText)findViewById(R.id.inputPlayerName);
 
-        txtTamagotchiName = (EditText) findViewById(R.id.inputTamagotchiName);
-        txtTamagotchiName = (EditText) findViewById(R.id.inputPlayerName);
-
-        //GetValues
-        //TamagotchiName = txtTamagotchiName.getText().toString();
-        //PlayerName = txtPlayerName.getText().toString();
 
 
     }
@@ -46,7 +47,16 @@ public class Pnl3_View extends LinearLayout {
     public void setRefCtrl(Pnl3_Ctrl c) {
         refCtrl= c;
         btnGotoPnl2.setOnClickListener(refCtrl);
-        txtTamagotchiName.setOnClickListener(refCtrl);
-        txtPlayerName.setOnClickListener(refCtrl);
+
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        if(PlayerName.getText().toString() != "" ){
+            refMdl.setPlayerNameStr(PlayerName.getText().toString());
+        }
+        if (TamagotchiName.getText().toString()!= ""){
+            refMdl.setTamagotchiNameStr((TamagotchiName.getText().toString()));
+        }
     }
 }

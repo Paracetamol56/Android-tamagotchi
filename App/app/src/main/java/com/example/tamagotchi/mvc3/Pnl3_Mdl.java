@@ -15,10 +15,14 @@ public class Pnl3_Mdl extends Observable {
 
     public void setTamagotchiNameStr(String tamagotchiNameStr) {
         this.tamagotchiNameStr = tamagotchiNameStr;
+        setChanged();
+        notifyObservers();
     }
 
     public void setPlayerNameStr(String playerNameStr) {
         this.playerNameStr = playerNameStr;
+        setChanged();
+        notifyObservers();
     }
 
     public String getTamagotchiNameStr() {
@@ -28,4 +32,5 @@ public class Pnl3_Mdl extends Observable {
     public String getPlayerNameStr() {
         return playerNameStr;
     }
+
 }
