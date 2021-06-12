@@ -33,4 +33,11 @@ public class Pnl3_Mdl extends Observable {
         return playerNameStr;
     }
 
+    public void reset(){
+
+        setChanged();
+        notifyObservers();
+
+    }
+
 }

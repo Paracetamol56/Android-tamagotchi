@@ -17,6 +17,10 @@
         android:text="Joue avec moi"
         android:textColor="#FFFFFF" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="37dp" />
+
     <ImageView
         android:id="@+id/State"
         android:layout_width="343dp"

@@ -13,10 +13,22 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener {
     public PnlManager refPnlManager;
 
 
+
+
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.inputTamagotchiName) {
 
+        }
+
+        if (view.getId() == R.id.btnGotoPnl1){
+            refPnlManager.setPnl(1);
+        }
+
+        if (view.getId()==R.id.ResetButton){
+            refMdl.reset();
+            refView.TamagotchiName.setText(refMdl.getTamagotchiNameStr());
+            refView.PlayerName.setText(refMdl.getPlayerNameStr());
         }
     }
 
@@ -26,7 +38,6 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener {
             case R.id.inputTamagotchiName:
                 refMdl.setTamagotchiNameStr(refView.TamagotchiName.toString());
                 refMdl.setPlayerNameStr(refView.PlayerName.toString());
-
                 break;
 
         }
