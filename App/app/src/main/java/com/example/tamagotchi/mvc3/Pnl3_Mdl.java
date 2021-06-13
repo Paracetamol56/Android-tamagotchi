@@ -20,6 +20,9 @@ public class Pnl3_Mdl extends Observable {
     public Pnl3_Mdl() {
         tamagotchiNameStr = "Gros CON";
         playerNameStr = "Le boss";
+
+        setChanged();
+        notifyObservers();
     }
 
     public void setTamagotchiNameStr(String tamagotchiNameStr)
