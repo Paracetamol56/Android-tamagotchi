@@ -9,46 +9,42 @@
 
 package com.example.tamagotchi.mvc3;
 
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
 import com.example.tamagotchi.PnlManager;
 import com.example.tamagotchi.R;
-import com.example.tamagotchi.mvc2.Pnl2_Mdl;
 
-public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener {
+public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener
+{
     public Pnl3_Mdl refMdl;
     public Pnl3_View refView;
     public PnlManager refPnlManager;
 
-
-
-
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.inputTamagotchiName) {
-
+    public void onClick(View view)
+    {
+        if (view.getId() == R.id.btnGotoPnl2)
+        {
+            refPnlManager.setPnl(2);
         }
 
-        if (view.getId() == R.id.btnGotoPnl1){
-            refPnlManager.setPnl(1);
-        }
-
-        if (view.getId()==R.id.ResetButton){
+        if (view.getId() == R.id.btnReset)
+        {
             refMdl.reset();
-            refView.TamagotchiName.setText(refMdl.getTamagotchiNameStr());
-            refView.PlayerName.setText(refMdl.getPlayerNameStr());
+            Log.i("TamagotchiName", refView.TamagotchiName.toString());
+            Log.i("PlayerName", refView.PlayerName.toString());
         }
     }
 
     @Override
-    public boolean onKey(View v, int keyCode, KeyEvent event) {
-        switch(v.getId()){
-            case R.id.inputTamagotchiName:
-                refMdl.setTamagotchiNameStr(refView.TamagotchiName.toString());
-                refMdl.setPlayerNameStr(refView.PlayerName.toString());
-                break;
-
+    public boolean onKey(View v, int keyCode, KeyEvent event)
+    {
+        if (v.getId() == R.id.inputTamagotchiName)
+        {
+            refMdl.setTamagotchiNameStr(refView.TamagotchiName.toString());
+            refMdl.setPlayerNameStr(refView.PlayerName.toString());
         }
         return false;
     }

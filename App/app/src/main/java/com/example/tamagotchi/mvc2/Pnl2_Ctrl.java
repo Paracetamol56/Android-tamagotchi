@@ -30,7 +30,7 @@ public class Pnl2_Ctrl implements View.OnClickListener {
         else if (view.getId() == R.id.btnDrugs) {
             refMdl.drugs();
         }
-        else if (view.getId() == R.id.btnGotoPnl1) {
+        else if (view.getId() == R.id.btnGotoPnl2) {
             refPnlManager.setPnl(1);
         }
         else if (view.getId() == R.id.btnGotoPnl3) {

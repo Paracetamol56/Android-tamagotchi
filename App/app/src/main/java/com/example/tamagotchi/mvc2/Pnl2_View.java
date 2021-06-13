@@ -11,7 +11,6 @@ package com.example.tamagotchi.mvc2;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -56,7 +55,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
         txtBonheur = (TextView)findViewById(R.id.txtHappiness);
         txtMessage = (TextView)findViewById(R.id.txtMessage);
 
-        btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl1);
+        btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl2);
         btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
 
         State =(ImageView)findViewById(R.id.State);
@@ -75,9 +74,6 @@ public class Pnl2_View extends LinearLayout implements Observer {
     @Override
     public void update(Observable observable, Object o) {
         txtHeader.setText("Mes chaussettes sont sales");
-
-        Log.i("yo", findViewById(R.id.txtHunger).toString());
-        Log.i("yo", findViewById(R.id.txtHunger).toString());
 
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
         txtBonheur.setText(Integer.toString(refMdl.getHappiness()));

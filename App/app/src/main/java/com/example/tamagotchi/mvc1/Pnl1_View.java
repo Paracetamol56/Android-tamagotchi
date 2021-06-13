@@ -18,11 +18,14 @@ import android.widget.LinearLayout;
 
 import com.example.tamagotchi.R;
 
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Random;
 
 
-public class Pnl1_View extends LinearLayout {
+public class Pnl1_View extends LinearLayout implements Observer {
     public Pnl1_Ctrl refCtrl;
+    public Pnl1_Mdl refMdl;
 
     public Button btnGotoPnl2;
     public Button btnGotoPnl3;
@@ -37,7 +40,7 @@ public class Pnl1_View extends LinearLayout {
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
         inflater.inflate(R.layout.layout_pnl1, this);
 
-        btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl1);
+        btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl2);
         btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
 
         Image=(ImageView)findViewById(R.id.MainImage);
@@ -71,4 +74,8 @@ public class Pnl1_View extends LinearLayout {
     }
 
 
+    @Override
+    public void update(Observable o, Object arg) {
+
+    }
 }
