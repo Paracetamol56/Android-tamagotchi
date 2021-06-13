@@ -46,25 +46,14 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTamagotchiName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="Entrez le nom du Tamagotchi ..."
-            android:textColorHint="#535353"
-            app:boxStrokeColor="#61D095"
-            app:endIconTint="#61D095"
-            app:hintTextColor="#535353"
-            app:startIconTint="#61D095">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputTamagotchiName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
-                android:fontFamily="casual"
-                android:textColor="#FFFFFF" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="casual"
+            android:hint="@string/InputTamagotchi"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
@@ -87,31 +76,19 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPlayerName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:hint="Entrez votre nom ..."
-            android:textColorHint="#535353"
-            app:boxBackgroundColor="#00FFFFFF"
-            app:boxStrokeColor="#61D095"
-            app:endIconTint="#61D095"
-            app:hintTextColor="#535353"
-            app:startIconTint="#61D095">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputPlayerName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#00FFFFFF"
-                android:fontFamily="casual"
-                android:textColorHint="#FFFFFF" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="50dp"
+            android:background="#00FFFFFF"
+            android:fontFamily="casual"
+            android:hint="Entrez votre nom"
+            android:textColorHint="#FFFFFF" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/ResetButton"
+        android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -124,7 +101,7 @@
         android:layout_height="126dp" />
 
     <Button
-        android:id="@+id/btnGotoPnl1"
+        android:id="@+id/btnGotoPnl2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

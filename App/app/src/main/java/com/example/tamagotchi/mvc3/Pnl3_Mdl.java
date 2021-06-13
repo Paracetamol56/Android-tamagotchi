@@ -20,33 +20,42 @@ public class Pnl3_Mdl extends Observable {
     public Pnl3_Mdl() {
         tamagotchiNameStr = "Gros CON";
         playerNameStr = "Le boss";
+
+        setChanged();
+        notifyObservers();
     }
 
-    public void setTamagotchiNameStr(String tamagotchiNameStr) {
+    public void setTamagotchiNameStr(String tamagotchiNameStr)
+    {
         this.tamagotchiNameStr = tamagotchiNameStr;
         setChanged();
         notifyObservers();
     }
 
-    public void setPlayerNameStr(String playerNameStr) {
+    public void setPlayerNameStr(String playerNameStr)
+    {
         this.playerNameStr = playerNameStr;
         setChanged();
         notifyObservers();
     }
 
-    public String getTamagotchiNameStr() {
+    public String getTamagotchiNameStr()
+    {
         return tamagotchiNameStr;
     }
 
-    public String getPlayerNameStr() {
+    public String getPlayerNameStr()
+    {
         return playerNameStr;
     }
 
-    public void reset(){
+    public void reset()
+    {
+        this.tamagotchiNameStr = "Gros CON";
+        this.playerNameStr = "Le boss";
 
         setChanged();
         notifyObservers();
-
     }
 
 }

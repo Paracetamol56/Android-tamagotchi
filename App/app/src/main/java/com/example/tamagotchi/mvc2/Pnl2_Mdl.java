@@ -10,7 +10,6 @@
 package com.example.tamagotchi.mvc2;
 
 import android.os.Handler;
-import android.util.Log;
 
 import java.util.Observable;
 
@@ -107,14 +106,8 @@ public class Pnl2_Mdl extends Observable
                 mood = state.DEAD;
             }
 
-
-
-
-
             setChanged();
             notifyObservers();
-
-            Log.i("YES", "MAN");
 
             m_Handler.postDelayed(this, 2000);
         }
