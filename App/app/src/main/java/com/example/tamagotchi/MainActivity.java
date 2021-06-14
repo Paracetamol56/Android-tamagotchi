@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity
 {
     // === ATTRIBUTES === //
 
+    MediaPlayer player;
+
     // === METHODS === //
 
     /**
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         PnlManager manager= PnlManager.getInstance(this);
         manager.setPnl(1);
 
-        MediaPlayer player = MediaPlayer.create(this, R.raw.backgroundmusic);
+        player = MediaPlayer.create(this, R.raw.backgroundmusic);
         player.setLooping(true);
         player.start();
     }
