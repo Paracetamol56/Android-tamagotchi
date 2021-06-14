@@ -11,6 +11,7 @@ package com.example.tamagotchi.mvc2;
 import android.os.Handler;
 
 import com.example.tamagotchi.R;
+import com.example.tamagotchi.mvc3.Pnl3_Mdl;
 
 import java.util.Observable;
 import java.util.Random;
@@ -24,12 +25,14 @@ public class Pnl2_Mdl extends Observable
 {
     // === ATTRIBUTES === //
 
+
     // Tamagotchi variables
     private int hunger;
     private int happiness;
     private int Overdose;
 
     private String message;
+    private String Name;
 
     // Timer thread
     private Thread thread;
@@ -308,9 +311,5 @@ public class Pnl2_Mdl extends Observable
         notifyObservers();
     }
 
-    public void changeName(String name){
-        setChanged();
-        notifyObservers();
 
-    }
 }

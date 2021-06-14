@@ -9,17 +9,7 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="28dp" />
-
-    <TextView
-        android:id="@+id/TamagotchiName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual"
-        android:gravity="center"
-        android:text="nom_tamagotchi"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:layout_height="27dp" />
 
     <TextView
         android:id="@+id/txtHeader"

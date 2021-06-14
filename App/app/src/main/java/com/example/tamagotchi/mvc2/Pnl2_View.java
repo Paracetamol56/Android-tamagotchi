@@ -53,7 +53,7 @@ public class Pnl2_View extends LinearLayout implements Observer
 
     // Image view
     public ImageView State;
-    public TextView txtNomTamagotchi;
+    
 
     public Pnl3_Mdl refMdl3;
     //public Pnl2_Mdl refMdl;
@@ -89,7 +89,6 @@ public class Pnl2_View extends LinearLayout implements Observer
 
         // Find image view in layout
         State =(ImageView)findViewById(R.id.State);
-        txtNomTamagotchi = (TextView)findViewById(R.id.TamagotchiName);
     }
 
     /**
@@ -121,7 +120,6 @@ public class Pnl2_View extends LinearLayout implements Observer
     public void update(Observable observable, Object arg)
     {
         // Update Textview
-        txtNomTamagotchi.setText(refMdl3.getTamagotchiNameStr());
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
         txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
         txtMessage.setText(refMdl.getMessage());
