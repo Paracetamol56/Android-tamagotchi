@@ -53,7 +53,7 @@ public class Pnl2_View extends LinearLayout implements Observer
 
     // Image view
     public ImageView State;
-    
+
 
     public Pnl3_Mdl refMdl3;
     //public Pnl2_Mdl refMdl;
@@ -128,25 +128,25 @@ public class Pnl2_View extends LinearLayout implements Observer
         switch (refMdl.getMood())
         {
             case HAPPY:
-                txtHeader.setText("Content");
+                txtHeader.setText("Je suinte de bonheur");
                 State.setImageResource(R.drawable.heureux);
                 break;
             case SAD:
                 State.setImageResource(R.drawable.triste);
                 break;
             case HUNGRY:
-                txtHeader.setText("Trop faim");
+                txtHeader.setText("La foncedalle mon pote");
                 State.setImageResource(R.drawable.faim);
                 break;
             case DEAD:
-                txtHeader.setText("Dead");
+                txtHeader.setText("Fallait bien mourir de quelque chose");
                 State.setImageResource(R.drawable.mort);
                 btnDrugs.setEnabled(false);
                 btnFastFood.setEnabled(false);
                 btnSmoke.setEnabled(false);
                 break;
             case OVERDOSE :
-                txtHeader.setText("Tu fais une overdose");
+                txtHeader.setText("Je crois que j'ai un peu abusé la bro");
                 State.setImageResource(R.drawable.drogue);
                 break;
         }

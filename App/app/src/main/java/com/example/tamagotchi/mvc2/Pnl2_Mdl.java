@@ -138,7 +138,7 @@ public class Pnl2_Mdl extends Observable
             // Overdose ?
             if (Overdose >= 80){
                 mood= state.OVERDOSE;
-                message = "C'est moi ou je vois un arc en ciel ?";
+                message = "Waaahh les couleurs de fou de dingue";
             }
 
             // Mood = DEAD ?
@@ -266,39 +266,39 @@ public class Pnl2_Mdl extends Observable
         {
             // CANNABIS : delta9-tétrahydrocannabinol
             case 0 :
-                message = "Un peu de delta9-tétrahydrocannabinol";
+                message = "Un peu de delta9-tétrahydrocannabinol comme Snoop Doggy Dog";
                 break;
             // COCAINE : chlorhydrate de cocaïne
             case 1 :
-                message = "chlorhydrate de cocaïne";
+                message = "chlorhydrate de cocaïne dans le piff, ca fait du bien par ou sa passe";
                 break;
             // OPIUM
             case 2 :
-                message = "opium";
+                message = "opium, wtf un singe avec une trompette";
                 break;
             // MORPHINE
             case 3 :
-                message = "morphine";
+                message = "morphine, AAAAH";
                 break;
             // LSD : diéthyllysergamide
             case 4 :
-                message = "diéthyllysergamide";
+                message = "diéthyllysergamide, La vie est si belle putain c'est un bonheur";
                 break;
             // GHB : acide GammaHydroxyButyrique
             case 5 :
-                message = "acide GammaHydroxyButyrique";
+                message = "acide GammaHydroxyButyrique, un petit bisous d'amour mon chérie";
                 break;
             // METHAMPHETAMINE : méthamphétamine
             case 6 :
-                message = "méthamphétamine";
+                message = "méthamphétamine, Je vous 1v1 tous bagarre maintenant gare du puy";
                 break;
             // PSYCHOANALEPTIQUES psychoanaleptiques
             case 7 :
-                message = "psychoanaleptiques";
+                message = "psychoanaleptiques, le problème d'être plus rapide que la lumière, c'est que tu dois vivre dans l'ombre";
                 break;
             // THYMOANALEPTIQUES : thymoanaleptiques
             case 8 :
-                message = "thymoanaleptiques";
+                message = "thymoanaleptiques, ça allait mal mais maintenant ca va";
                 break;
         }
 
