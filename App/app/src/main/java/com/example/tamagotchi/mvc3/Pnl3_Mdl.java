@@ -100,8 +100,8 @@ public class Pnl3_Mdl extends Observable
     public void reset()
     {
         // Reinitialize every variables
-        this.tamagotchiNameStr = "Gros CON";
-        this.playerNameStr = "Le boss";
+        this.tamagotchiNameStr = "Bud";
+        this.playerNameStr = "Gorgious";
         // Apply changes and notify the view
         setChanged();
         notifyObservers();

@@ -67,8 +67,8 @@ public class Pnl3_View extends LinearLayout implements Observer
         TamagotchiName = (TextInputEditText)findViewById(R.id.inputTamagotchiName);
         PlayerName = (TextInputEditText)findViewById(R.id.inputPlayerName);
 
-        TamagotchiName.setText("Gros CON");
-        PlayerName.setText("Le boss");
+        TamagotchiName.setText("Bud");
+        PlayerName.setText("Gorgious");
 
         btnReset.setOnClickListener(new View.OnClickListener()
         {
