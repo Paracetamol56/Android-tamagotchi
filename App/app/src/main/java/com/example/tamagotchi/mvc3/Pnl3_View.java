@@ -82,12 +82,8 @@ public class Pnl3_View extends LinearLayout implements Observer
                 TamagotchiName.getText().clear();
 
                 // Clear the second EditText
-<<<<<<< HEAD
-                PlayerName.setText("");
-=======
                 PlayerName.getText().clear();
                 refMdl.reset();
->>>>>>> main
             }
         });
     }
