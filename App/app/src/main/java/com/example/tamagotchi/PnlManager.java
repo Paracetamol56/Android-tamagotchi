@@ -65,6 +65,7 @@ public class PnlManager {
         view2.refMdl= mdl2;
         ctrl2.refMdl= mdl2;
         view2.setRefCtrl(ctrl2);
+        view2.refMdl3=mdl3;
         ctrl2.refPnlManager= this;
 
         view3.refMdl= mdl3;

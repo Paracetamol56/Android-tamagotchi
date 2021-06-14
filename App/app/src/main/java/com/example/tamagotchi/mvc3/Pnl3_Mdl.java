@@ -51,9 +51,8 @@ public class Pnl3_Mdl extends Observable {
 
     public void reset()
     {
-        this.tamagotchiNameStr = "Gros CON";
-        this.playerNameStr = "Le boss";
-
+        tamagotchiNameStr="";
+        playerNameStr="";
         setChanged();
         notifyObservers();
     }

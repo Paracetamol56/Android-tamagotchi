@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Nom_Tamagotchi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2A4747"
     android:orientation="vertical">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="28dp" />
+
+    <TextView
+        android:id="@+id/TamagotchiName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="nom_tamagotchi"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txtHeader"
@@ -19,14 +34,14 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="37dp" />
+        android:layout_height="29dp" />
 
     <ImageView
         android:id="@+id/State"
-        android:layout_width="343dp"
-        android:layout_height="342dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="296dp"
+        android:layout_height="305dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         app:srcCompat="@drawable/drogue" />
 
     <LinearLayout
@@ -90,7 +105,7 @@
     <TextView
         android:id="@+id/txtMessage"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="15dp"
         android:fontFamily="casual"
         android:gravity="center"

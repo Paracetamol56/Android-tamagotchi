@@ -9,6 +9,7 @@
 
 package com.example.tamagotchi.mvc2;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tamagotchi.R;
+import com.example.tamagotchi.mvc3.Pnl3_Mdl;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -32,6 +34,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
     public TextView txtFaim;
     public TextView txtBonheur;
 
+    public Pnl3_Mdl refMdl3;
     public Pnl2_Mdl refMdl;
     public Pnl2_Ctrl refCtrl;
 
@@ -39,6 +42,8 @@ public class Pnl2_View extends LinearLayout implements Observer {
     public Button btnGotoPnl3;
 
     public ImageView State;
+    public TextView txtNomTamagotchi;
+
 
     public Pnl2_View(Context context) {
         super(context);
@@ -59,6 +64,8 @@ public class Pnl2_View extends LinearLayout implements Observer {
         btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
 
         State =(ImageView)findViewById(R.id.State);
+        txtNomTamagotchi = (TextView)findViewById(R.id.TamagotchiName);
+
     }
 
     public void setRefCtrl(Pnl2_Ctrl c) {
@@ -73,6 +80,7 @@ public class Pnl2_View extends LinearLayout implements Observer {
 
     @Override
     public void update(Observable observable, Object o) {
+        txtNomTamagotchi.setText(refMdl3.getTamagotchiNameStr());
         txtHeader.setText("Mes chaussettes sont sales");
 
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
