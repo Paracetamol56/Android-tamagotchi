@@ -10,7 +10,10 @@ package com.example.tamagotchi.mvc2;
 
 import android.os.Handler;
 
+import com.example.tamagotchi.R;
+
 import java.util.Observable;
+import java.util.Random;
 
 /**
  * Class
@@ -25,6 +28,8 @@ public class Pnl2_Mdl extends Observable
     private int hunger;
     private int happiness;
     private int Overdose;
+
+    private String message;
 
     // Timer thread
     private Thread thread;
@@ -77,6 +82,7 @@ public class Pnl2_Mdl extends Observable
         happiness = 100;
         Overdose = 0;
         mood = state.HAPPY;
+        message = "Je suis content";
 
         // Apply changes and notify the view
         setChanged();
@@ -129,6 +135,7 @@ public class Pnl2_Mdl extends Observable
             // Overdose ?
             if (Overdose >= 80){
                 mood= state.OVERDOSE;
+                message = "C'est moi ou je vois un arc en ciel ?";
             }
 
             // Mood = DEAD ?
@@ -176,6 +183,15 @@ public class Pnl2_Mdl extends Observable
     }
 
     /**
+     * @name getMessage
+     * @return String message
+     * Purpose : message getter
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
      * @name smoke
      * @return void
      * Purpose : modify values when smoke
@@ -190,6 +206,8 @@ public class Pnl2_Mdl extends Observable
         {
             happiness = 100;
         }
+
+        message = "Chacun son cancer";
 
         // Apply changes and notify the view
         setChanged();
@@ -212,6 +230,8 @@ public class Pnl2_Mdl extends Observable
             hunger = 0;
         }
 
+        message = "Miam Miam";
+
         // Apply changes and notify the view
         setChanged();
         notifyObservers();
@@ -226,7 +246,7 @@ public class Pnl2_Mdl extends Observable
     {
         if (happiness < 91)
         {
-            happiness = 100;
+            happiness += 10;
             Overdose +=10;
         }
         else
@@ -234,6 +254,56 @@ public class Pnl2_Mdl extends Observable
             happiness = 100;
             Overdose +=10;
         }
+
+        // Generate random number
+        final int random = new Random().nextInt(9);
+
+        // Choose a drug
+        switch (random)
+        {
+            // CANNABIS : delta9-tétrahydrocannabinol
+            case 0 :
+                message = "Un peu de delta9-tétrahydrocannabinol";
+                break;
+            // COCAINE : chlorhydrate de cocaïne
+            case 1 :
+                message = "chlorhydrate de cocaïne";
+                break;
+            // OPIUM
+            case 2 :
+                message = "opium";
+                break;
+            // MORPHINE
+            case 3 :
+                message = "morphine";
+                break;
+            // LSD : diéthyllysergamide
+            case 4 :
+                message = "diéthyllysergamide";
+                break;
+            // GHB : acide GammaHydroxyButyrique
+            case 5 :
+                message = "acide GammaHydroxyButyrique";
+                break;
+            // METHAMPHETAMINE : méthamphétamine
+            case 6 :
+                message = "méthamphétamine";
+                break;
+            // PSYCHOANALEPTIQUES psychoanaleptiques
+            case 7 :
+                message = "psychoanaleptiques";
+                break;
+            // THYMOANALEPTIQUES : thymoanaleptiques
+            case 8 :
+                message = "thymoanaleptiques";
+                break;
+        }
+
+        if (Overdose > 65)
+        {
+            message = "Fais gaffe, l'overdose est proche";
+        }
+
         setChanged();
         notifyObservers();
     }

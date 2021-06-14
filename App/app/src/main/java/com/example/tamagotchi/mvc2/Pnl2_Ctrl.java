@@ -49,6 +49,7 @@ public class Pnl2_Ctrl implements View.OnClickListener
         else if (view.getId() == R.id.btnFastFood)
         {
             refMdl.fastFood();
+
         }
 
         // On button "btnDrugs"

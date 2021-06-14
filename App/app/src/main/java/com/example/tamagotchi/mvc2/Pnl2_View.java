@@ -122,34 +122,33 @@ public class Pnl2_View extends LinearLayout implements Observer
     {
         // Update Textview
         txtNomTamagotchi.setText(refMdl3.getTamagotchiNameStr());
-        txtHeader.setText("Mes chaussettes sont sales");
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
         txtBonheur.setText(Integer.toString(refMdl.getHappiness()));
+        txtMessage.setText(refMdl.getMessage());
 
         // Update according to mood
         switch (refMdl.getMood())
         {
             case HAPPY:
-                txtMessage.setText("Content");
+                txtHeader.setText("Content");
                 State.setImageResource(R.drawable.heureux);
                 break;
             case SAD:
-                txtMessage.setText("Triste");
                 State.setImageResource(R.drawable.triste);
                 break;
             case HUNGRY:
-                txtMessage.setText("Trop faim");
+                txtHeader.setText("Trop faim");
                 State.setImageResource(R.drawable.faim);
                 break;
             case DEAD:
-                txtMessage.setText("Dead");
+                txtHeader.setText("Dead");
                 State.setImageResource(R.drawable.mort);
                 btnDrugs.setEnabled(false);
                 btnFastFood.setEnabled(false);
                 btnSmoke.setEnabled(false);
                 break;
             case OVERDOSE :
-                txtMessage.setText("Tu fais une overdose");
+                txtHeader.setText("Tu fais une overdose");
                 State.setImageResource(R.drawable.drogue);
                 break;
         }
