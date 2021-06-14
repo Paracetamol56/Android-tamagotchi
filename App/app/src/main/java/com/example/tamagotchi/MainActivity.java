@@ -21,5 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         PnlManager manager= PnlManager.getInstance(this);
         manager.setPnl(1);
+
+
     }
 }

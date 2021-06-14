@@ -13,17 +13,12 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.tamagotchi.R;
-import com.example.tamagotchi.mvc2.Pnl2_Ctrl;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-
-import org.w3c.dom.Text;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -63,7 +58,11 @@ public class Pnl3_View extends LinearLayout implements Observer{
     @Override
     public void update(Observable o, Object arg)
     {
-        TamagotchiName.setHint(refMdl.getTamagotchiNameStr());
-        PlayerName.setHint(refMdl.getPlayerNameStr());
+        TamagotchiName.setText(refMdl.getTamagotchiNameStr());
+        PlayerName.setText(refMdl.getPlayerNameStr());
     }
+
+   /* btnReset.setOnClickListener(new View.OnClickListener){
+
+    }*/
 }

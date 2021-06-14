@@ -26,6 +26,7 @@ public class Pnl2_Mdl extends Observable
     {
         HAPPY, SAD, HUNGRY, DEAD, OVERDOSE
     }
+
     private state mood;
 
     public enum drug
