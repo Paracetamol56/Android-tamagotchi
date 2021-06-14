@@ -70,6 +70,7 @@ public class PnlManager {
 
         view3.refMdl= mdl3;
         ctrl3.refMdl= mdl3;
+        ctrl3.refMdl2=mdl2;
         view3.setRefCtrl(ctrl3);
         ctrl3.refPnlManager= this;
 
