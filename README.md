@@ -1,2 +1,11 @@
 # Android-tamagotchi
-An android tamagotchi app made in Java
+
+## Creators
+
+- Sahel Haouchet
+- Mathéo Galuba
+
+## Additional features
+
+- Background music
+- Random messages
