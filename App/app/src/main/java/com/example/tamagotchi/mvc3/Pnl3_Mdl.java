@@ -102,7 +102,6 @@ public class Pnl3_Mdl extends Observable
         // Reinitialize every variables
         this.tamagotchiNameStr = "Gros CON";
         this.playerNameStr = "Le boss";
-
         // Apply changes and notify the view
         setChanged();
         notifyObservers();

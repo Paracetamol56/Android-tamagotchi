@@ -307,4 +307,10 @@ public class Pnl2_Mdl extends Observable
         setChanged();
         notifyObservers();
     }
+
+    public void changeName(String name){
+        setChanged();
+        notifyObservers();
+
+    }
 }
