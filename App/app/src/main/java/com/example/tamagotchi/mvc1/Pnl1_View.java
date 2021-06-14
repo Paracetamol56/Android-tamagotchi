@@ -1,4 +1,4 @@
-/*
+/**
  * Created on Sun Jun 13 2021
  *
  * Copyright (c) 2021 - Mathéo G & Sahel H - All Right Reserved
@@ -22,32 +22,53 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Random;
 
+/**
+ * Class
+ * @name Pnl1_View
+ * Purpose : Panel 1 | View
+ */
+public class Pnl1_View extends LinearLayout implements Observer
+{
+    // === ATTRIBUTES === //
 
-public class Pnl1_View extends LinearLayout implements Observer {
+    // Reference to Controller
     public Pnl1_Ctrl refCtrl;
+    // Reference to Model
     public Pnl1_Mdl refMdl;
 
+    // Buttons
     public Button btnGotoPnl2;
     public Button btnGotoPnl3;
 
+    // Image view
     public ImageView Image;
 
+    // === METHODS === //
 
-
-    public Pnl1_View(Context context) {
+    /**
+     * @name Pnl1_View
+     * @param Context context
+     * Purpose : Constructor
+     */
+    public Pnl1_View(Context context)
+    {
         super(context);
 
+        // Inflate layout from xml resources
         LayoutInflater inflater= ((Activity)context).getLayoutInflater();
         inflater.inflate(R.layout.layout_pnl1, this);
 
-        btnGotoPnl2= (Button)findViewById(R.id.btnGotoPnl2);
-        btnGotoPnl3= (Button)findViewById(R.id.btnGotoPnl3);
+        // Find buttons in layout
+        btnGotoPnl2 = (Button)findViewById(R.id.btnGotoPnl2);
+        btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
 
+        // Find image view in layout
         Image=(ImageView)findViewById(R.id.MainImage);
 
-        //Random pics
+        // Generate random number
         final int random = new Random().nextInt(4);
 
+        // Choose an image to display on the front page
         switch (random)
         {
             case 0 :
@@ -63,19 +84,32 @@ public class Pnl1_View extends LinearLayout implements Observer {
                 Image.setImageResource(R.drawable.drogue);
                 break;
         }
-
-
     }
 
-    public void setRefCtrl(Pnl1_Ctrl c) {
-        refCtrl= c;
+    /**
+     * @name setRefCtrl
+     * @param Pnl1_Ctrl c
+     * @return void
+     * Purpose : Controller reference setter
+     */
+    public void setRefCtrl(Pnl1_Ctrl c)
+    {
+        refCtrl = c;
+        // Set buttons to OnClickListener
         btnGotoPnl2.setOnClickListener(refCtrl);
         btnGotoPnl3.setOnClickListener(refCtrl);
     }
 
-
+    /**
+     * @name update
+     * @param Observable o
+     * @param Object arg
+     * @return void
+     * @from Observer
+     * Purpose : Update the view
+     */
     @Override
-    public void update(Observable o, Object arg) {
-
+    public void update(Observable o, Object arg)
+    {
     }
 }

@@ -1,4 +1,4 @@
-/*
+/**
  * Created on Sun Jun 13 2021
  *
  * Copyright (c) 2021 - Mathéo G & Sahel H - All Right Reserved
@@ -14,26 +14,58 @@ import android.view.View;
 import com.example.tamagotchi.PnlManager;
 import com.example.tamagotchi.R;
 
-public class Pnl2_Ctrl implements View.OnClickListener {
-    public Pnl2_Mdl refMdl;
+/**
+ * Class
+ * @name Pnl2_Ctrl
+ * Purpose : Panel 2 | Controller
+ */
+public class Pnl2_Ctrl implements View.OnClickListener
+{
+    // === ATTRIBUTES === //
 
+    // Reference to Manager
+    public Pnl2_Mdl refMdl;
+    // Reference to Manager
     public PnlManager refPnlManager;
 
+    // === METHODS === //
+
+    /**
+     * @name onClick
+     * @param View view
+     * @return void
+     * @from OnClickListener
+     * Purpose : Bind button click with action and panel switching
+     */
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.btnSmoke) {
+        // On button "btnSmoke"
+        if (view.getId() == R.id.btnSmoke)
+        {
             refMdl.smoke();
         }
-        else if (view.getId() == R.id.btnFastFood) {
+
+        // On button "btnFastFood"
+        else if (view.getId() == R.id.btnFastFood)
+        {
             refMdl.fastFood();
         }
-        else if (view.getId() == R.id.btnDrugs) {
+
+        // On button "btnDrugs"
+        else if (view.getId() == R.id.btnDrugs)
+        {
             refMdl.drugs();
         }
-        else if (view.getId() == R.id.btnGotoPnl2) {
+
+        // On button "btnGotoPnl2"
+        else if (view.getId() == R.id.btnGotoPnl2)
+        {
             refPnlManager.setPnl(1);
         }
-        else if (view.getId() == R.id.btnGotoPnl3) {
+
+        // On button "btnGotoPnl3"
+        else if (view.getId() == R.id.btnGotoPnl3)
+        {
             refPnlManager.setPnl(3);
         }
     }

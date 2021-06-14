@@ -1,4 +1,4 @@
-/*
+/**
  * Created on Sun Jun 13 2021
  *
  * Copyright (c) 2021 - Mathéo G & Sahel H - All Right Reserved
@@ -10,18 +10,32 @@
 package com.example.tamagotchi;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+/**
+ * Class
+ * @name MainActivity
+ * Purpose : Main Activity handler
+ */
+public class MainActivity extends AppCompatActivity
+{
+    // === ATTRIBUTES === //
 
-public class MainActivity extends AppCompatActivity {
+    // === METHODS === //
 
+    /**
+     * @name onCreate
+     * @param Bundle savedInstanceState
+     * @return void
+     * @from AppCompatActivity
+     * Purpose : Initializer
+     */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
+        // Start with panel 1
         PnlManager manager= PnlManager.getInstance(this);
         manager.setPnl(1);
-
-
     }
 }
