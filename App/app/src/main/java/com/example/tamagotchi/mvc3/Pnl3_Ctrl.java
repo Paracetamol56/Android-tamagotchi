@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.example.tamagotchi.PnlManager;
 import com.example.tamagotchi.R;
+import com.example.tamagotchi.mvc2.Pnl2_Mdl;
 
 /**
  * Class
@@ -26,7 +27,11 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener
 
     // Reference to Manager
     public Pnl3_Mdl refMdl;
+<<<<<<< HEAD
     // Reference to View
+=======
+    public Pnl2_Mdl refMdl2;
+>>>>>>> main
     public Pnl3_View refView;
     // Reference to Manager
     public PnlManager refPnlManager;
@@ -52,6 +57,10 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener
         // On button "btnReset"
         if (view.getId() == R.id.btnReset)
         {
+<<<<<<< HEAD
+=======
+            //refMdl.reset();
+>>>>>>> main
         }
     }
 
@@ -71,7 +80,9 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener
         if (v.getId() == R.id.inputTamagotchiName)
         {
             refMdl.setTamagotchiNameStr(refView.TamagotchiName.toString());
+
             refMdl.setPlayerNameStr(refView.PlayerName.toString());
+            
         }
         return false;
     }

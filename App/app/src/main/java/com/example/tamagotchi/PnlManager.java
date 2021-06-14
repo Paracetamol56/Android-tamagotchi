@@ -92,11 +92,20 @@ public class PnlManager
         view2.refMdl = mdl2;
         ctrl2.refMdl = mdl2;
         view2.setRefCtrl(ctrl2);
+<<<<<<< HEAD
         ctrl2.refPnlManager = this;
 
         // Panel 3 Setup references
         view3.refMdl = mdl3;
         ctrl3.refMdl = mdl3;
+=======
+        view2.refMdl3=mdl3;
+        ctrl2.refPnlManager= this;
+
+        view3.refMdl= mdl3;
+        ctrl3.refMdl= mdl3;
+        ctrl3.refMdl2=mdl2;
+>>>>>>> main
         view3.setRefCtrl(ctrl3);
         ctrl3.refPnlManager = this;
 

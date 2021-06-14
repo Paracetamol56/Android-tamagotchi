@@ -48,8 +48,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputTamagotchiName"
-            android:layout_width="match_parent"
+            android:layout_width="367dp"
             android:layout_height="50dp"
+            android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:fontFamily="casual"
             android:hint="@string/InputTamagotchi"
@@ -79,8 +80,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPlayerName"
-            android:layout_width="match_parent"
+            android:layout_width="366dp"
             android:layout_height="50dp"
+            android:layout_gravity="center"
             android:background="#00FFFFFF"
             android:fontFamily="casual"
             android:hint="Entrez votre nom"

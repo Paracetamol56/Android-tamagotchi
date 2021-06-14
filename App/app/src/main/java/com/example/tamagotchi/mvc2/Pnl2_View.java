@@ -9,6 +9,7 @@
 
 package com.example.tamagotchi.mvc2;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.tamagotchi.R;
+import com.example.tamagotchi.mvc3.Pnl3_Mdl;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -49,8 +51,20 @@ public class Pnl2_View extends LinearLayout implements Observer
     public TextView txtFaim;
     public TextView txtBonheur;
 
+<<<<<<< HEAD
     // Image view
+=======
+    public Pnl3_Mdl refMdl3;
+    public Pnl2_Mdl refMdl;
+    public Pnl2_Ctrl refCtrl;
+
+    public Button btnGotoPnl1;
+    public Button btnGotoPnl3;
+
+>>>>>>> main
     public ImageView State;
+    public TextView txtNomTamagotchi;
+
 
     // === METHODS === //
 
@@ -79,8 +93,17 @@ public class Pnl2_View extends LinearLayout implements Observer
         txtBonheur = (TextView)findViewById(R.id.txtHappiness);
         txtMessage = (TextView)findViewById(R.id.txtMessage);
 
+<<<<<<< HEAD
         // Find image view in layout
         State = (ImageView)findViewById(R.id.State);
+=======
+        btnGotoPnl1 = (Button)findViewById(R.id.btnGotoPnl2);
+        btnGotoPnl3 = (Button)findViewById(R.id.btnGotoPnl3);
+
+        State =(ImageView)findViewById(R.id.State);
+        txtNomTamagotchi = (TextView)findViewById(R.id.TamagotchiName);
+
+>>>>>>> main
     }
 
     /**
@@ -109,9 +132,14 @@ public class Pnl2_View extends LinearLayout implements Observer
      * Purpose : Update the view
      */
     @Override
+<<<<<<< HEAD
     public void update(Observable observable, Object arg)
     {
         // Update Textview
+=======
+    public void update(Observable observable, Object o) {
+        txtNomTamagotchi.setText(refMdl3.getTamagotchiNameStr());
+>>>>>>> main
         txtHeader.setText("Mes chaussettes sont sales");
         txtFaim.setText(Integer.toString(refMdl.getHunger()));
         txtBonheur.setText(Integer.toString(refMdl.getHappiness()));

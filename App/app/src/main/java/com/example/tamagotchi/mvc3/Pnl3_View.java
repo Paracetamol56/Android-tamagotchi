@@ -79,10 +79,15 @@ public class Pnl3_View extends LinearLayout implements Observer
             @Override
             public void onClick(View v) {
                 // Set the first EditText empty
-                TamagotchiName.setText("");
+                TamagotchiName.getText().clear();
 
                 // Clear the second EditText
+<<<<<<< HEAD
                 PlayerName.setText("");
+=======
+                PlayerName.getText().clear();
+                refMdl.reset();
+>>>>>>> main
             }
         });
     }
