@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.tamagotchi.R;
 import com.google.android.material.textfield.TextInputEditText;
@@ -46,13 +47,24 @@ public class Pnl3_View extends LinearLayout implements Observer{
 
         TamagotchiName = (TextInputEditText)findViewById(R.id.inputTamagotchiName);
         PlayerName = (TextInputEditText)findViewById(R.id.inputPlayerName);
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the first EditText empty
+                TamagotchiName.setText("");
+
+                // Clear the second EditText
+                PlayerName.getText().clear();
+            }
+        });
     }
 
     public void setRefCtrl(Pnl3_Ctrl c)
     {
         refCtrl= c;
         btnGotoPnl2.setOnClickListener(refCtrl);
-        btnReset.setOnClickListener(refCtrl);
+        //btnReset.setOnClickListener(refCtrl);
     }
 
     @Override
@@ -62,7 +74,5 @@ public class Pnl3_View extends LinearLayout implements Observer{
         PlayerName.setText(refMdl.getPlayerNameStr());
     }
 
-   /* btnReset.setOnClickListener(new View.OnClickListener){
 
-    }*/
 }

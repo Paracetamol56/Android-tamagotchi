@@ -32,7 +32,7 @@ public class Pnl3_Ctrl implements View.OnClickListener,View.OnKeyListener
 
         if (view.getId() == R.id.btnReset)
         {
-            refMdl.reset();
+            //refMdl.reset();
             Log.i("TamagotchiName", refView.TamagotchiName.toString());
             Log.i("PlayerName", refView.PlayerName.toString());
         }
