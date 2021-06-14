@@ -53,7 +53,8 @@
             android:background="#00FFFFFF"
             android:fontFamily="casual"
             android:hint="@string/InputTamagotchi"
-            android:textColor="#FFFFFF" />
+            android:textColor="#5A5A5A"
+            android:textColorHint="#4E4E4E" />
 
     </LinearLayout>
 
@@ -83,7 +84,7 @@
             android:background="#00FFFFFF"
             android:fontFamily="casual"
             android:hint="Entrez votre nom"
-            android:textColorHint="#FFFFFF" />
+            android:textColorHint="#5A5A5A" />
 
     </LinearLayout>
 
