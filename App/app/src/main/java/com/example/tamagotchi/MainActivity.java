@@ -10,6 +10,8 @@
 package com.example.tamagotchi;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 /**
@@ -37,5 +39,9 @@ public class MainActivity extends AppCompatActivity
         // Start with panel 1
         PnlManager manager= PnlManager.getInstance(this);
         manager.setPnl(1);
+
+        MediaPlayer player = MediaPlayer.create(this, R.raw.backgroundmusic);
+        player.setLooping(true);
+        player.start();
     }
 }
